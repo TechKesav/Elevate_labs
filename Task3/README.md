@@ -14,20 +14,6 @@ It allows users to manage **books** and **users**, with basic features like issu
 
 ---
 
-##  Project Structure
-
-Task3/
-|--output
-│-- src/
-│ ├── Book.java
-│ ├── User.java
-│ ├── Library.java
-│ └── LibraryManagementSystem.java
-│
-└── README.md
-
----
-
 ## 🚀 Features
 1. Add new books to the library.
 2. Register new users.
