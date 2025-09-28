@@ -8,11 +8,12 @@ It allows users to manage **books** and **users**, with basic features like issu
 
 ##  Tools & Requirements
 - **Java 8+**
-- **VS Code** or **IntelliJ IDEA CE**
+- **IntelliJ IDEA CE**
 - **Git** (for version control)
 - **Terminal/Command Prompt**
 
 ---
+
 
 ## 🚀 Features
 1. Add new books to the library.
