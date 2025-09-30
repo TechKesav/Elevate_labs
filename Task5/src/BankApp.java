@@ -6,7 +6,6 @@ public class BankApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Create an account
         System.out.print("Enter account number: ");
         String accNo = sc.nextLine();
         System.out.print("Enter account holder name: ");
@@ -39,16 +38,16 @@ public class BankApp {
                     account.withdraw(withdrawAmount);
                     break;
                 case 3:
-                    System.out.println("💰 Current Balance: " + account.getBalance());
+                    System.out.println(" Current Balance: " + account.getBalance());
                     break;
                 case 4:
                     account.printTransactionHistory();
                     break;
                 case 5:
-                    System.out.println("👋 Thank you for using the Bank App!");
+                    System.out.println(" Thank you for using the Bank App!");
                     break;
                 default:
-                    System.out.println("❌ Invalid choice, try again.");
+                    System.out.println(" Invalid choice, try again.");
             }
         } while (choice != 5);
 
