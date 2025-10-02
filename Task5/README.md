@@ -8,7 +8,6 @@ It allows users to perform basic banking operations like depositing, withdrawing
 Java 8+
 
 IntelliJ IDEA CE (or VS Code / Eclipse)
-
 Git (for version control)
 
 Terminal / Command Prompt

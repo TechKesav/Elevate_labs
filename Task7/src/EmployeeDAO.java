@@ -1,11 +1,9 @@
-package Task7;
+package Task7.src;
 
 import java.sql.*;
-import java.util.Scanner;
 
 public class EmployeeDAO {
 
-    // Add Employee
     public void addEmployee(String name, String department, double salary) {
         String sql = "INSERT INTO employees(name, department, salary) VALUES (?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
@@ -16,14 +14,13 @@ public class EmployeeDAO {
             stmt.setDouble(3, salary);
             stmt.executeUpdate();
 
-            System.out.println("✅ Employee added successfully!");
+            System.out.println(" Employee added successfully!");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // View All Employees
     public void viewEmployees() {
         String sql = "SELECT * FROM employees";
         try (Connection conn = DBConnection.getConnection();
@@ -43,7 +40,6 @@ public class EmployeeDAO {
         }
     }
 
-    // Update Employee
     public void updateEmployee(int id, String department, double salary) {
         String sql = "UPDATE employees SET department = ?, salary = ? WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -54,15 +50,14 @@ public class EmployeeDAO {
             stmt.setInt(3, id);
 
             int rows = stmt.executeUpdate();
-            if (rows > 0) System.out.println("✅ Employee updated!");
-            else System.out.println("⚠️ Employee not found.");
+            if (rows > 0) System.out.println(" Employee updated!");
+            else System.out.println(" Employee not found.");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // Delete Employee
     public void deleteEmployee(int id) {
         String sql = "DELETE FROM employees WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -71,8 +66,8 @@ public class EmployeeDAO {
             stmt.setInt(1, id);
             int rows = stmt.executeUpdate();
 
-            if (rows > 0) System.out.println("✅ Employee deleted!");
-            else System.out.println("⚠️ Employee not found.");
+            if (rows > 0) System.out.println(" Employee deleted!");
+            else System.out.println(" Employee not found.");
 
         } catch (SQLException e) {
             e.printStackTrace();
